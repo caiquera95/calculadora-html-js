@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+}
+
+
+body {
+    background-color: #333;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+#calc {
+    width: 400px;
+    padding: 1em;
+    background-color: #000;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+#calc h3 {
+    font-size: .8em;
+    font-weight: 300;
+    color: #666;
+}
+
+#operations {
+    text-align: right;
+    height: 4em;
+    margin-bottom: 1em;
+}
+
+#previous-opertion,
+#current-operation {
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+}
+
+#current-operation {
+    font-size: 1.8em;
+}
+
+#previous-operation {
+    color: #777;
+    font-size: 1.2em;
+}
+
+#current-operation,
+#previous-operation {
+    font-weight: 700;
+    padding: .2em;
+}
+
+#buttons-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 6px;
+}
+
+#buttons-container button {
+    /* border: 1px solid transparent; */
+    border-radius: 25%;
+    background-color: #dbdbdd;
+    font-size: 1.2em;
+    height: 4em;
+    cursor: pointer;
+}
+
+#buttons-container button:hover {
+    background-color: #c4c4c4;
+}
+
+#buttons-container .operation {
+    background-color: orange;
+    color: white;
+}
+/* 
+#buttons-container .operation:hover {
+    background-color: rgb(224, 149, 9);
+} */
+
+#buttons-container .number {
+    background-color: #5B5B5B;
+    color: white;
+}
+
+
+#buttons-container .number:hover {
+    background-color: #3b3b3b ;
+}
+
+#buttons-container #equal-btn {
+    grid-column: span 2;
+    border-radius: 20px;
+}
+
+#buttons-container #equal-btn:hover,
+#buttons-container .operation:hover {
+    background-color: rgb(224, 149, 9);
+}
+
+@media screen and (max-width: 375px) {
+    #buttons-container button {
+        /* border: 1px solid transparent; */
+        border-radius: 25%;
+        background-color: #dbdbdd;
+        font-size: .9em;
+        height: 4em;
+        cursor: pointer;
+    }
+
+    #calc {
+        width: 95%;
+        padding: 1em;
+        background-color: #000;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        flex-direction: column;
+    }
+}
